@@ -22,14 +22,14 @@ public class Userfactory {
     }
 
     public static User resetphone(String phoneNumber) {
-        return dao().get(phoneNumber);
+        return dao().getph(phoneNumber);
     }
 
-    public static int resetpasswordwithphone(String password,String phoneNumber) {
+    public static int resetpasswordwithphone(String phoneNumber, String password) {
         return dao().updatephone(password, phoneNumber);
     }
 
-    public static int resetpasswordwithmail(String password,String email) {
-        return dao().updatemail(password,email);
+    public static int resetpasswordwithmail(String email,String password) {
+        return dao().updatemail(password, email);
     }
 }

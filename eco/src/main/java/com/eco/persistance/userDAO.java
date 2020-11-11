@@ -17,10 +17,12 @@ public interface userDAO {
     @Mapper(Usermapper.class)
     User get(@Bind("email") String email);
 
+    @SqlQuery("select * from user where mobile=:phone")
+    @Mapper(Usermapper.class)
+    User getph(@Bind("phone") String phone);
+
     @SqlUpdate("update user set passwordHash=:passwordHash where email=:email")
-    int updatemail(@Bind("passwordHash") String passwordHash,@Bind("email") String email);
-    // UPDATE ACTOR SET FIRST_NAME = :firstName, LAST_UPDATE = :lastUpdate WHERE
-    // ACTOR_ID = :actorId;
+    int updatemail(@Bind("passwordHash") String passwordHash, @Bind("email") String email);
 
     @SqlUpdate("update user set passwordHash=:passwordHash where mobile=:phoneNumber")
     int updatephone(@Bind("passwordHash") String passwordHash, @Bind("phoneNumber") String phoneNumber);
