@@ -9,7 +9,7 @@ public class DbConnection {
             String dbc = "localhost:3306";
             DBI dbo = new DBI(
                     "jdbc:mysql://" + dbc + "/shop?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",
-                    "root", "skul");
+                    "root", "akshT08");
             return dbo;
         } catch (ClassNotFoundException e) {
             return null;
