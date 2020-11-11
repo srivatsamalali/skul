@@ -4,8 +4,6 @@ public class login {
 
     private void mainMenu() throws WriterException, IOException {
 
-        System.out.println("\nWelcome to Contactless Ticketing System");
-        System.out.println("----------------------------------------\n");
         System.out.println("Choose an Option");
         System.out.println("----------------");
         System.out.println("1. Login");
